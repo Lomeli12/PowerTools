@@ -9,7 +9,7 @@ public class ModItems {
 
     public static void initItems() {
         powerArmorFrame = new ItemArmorFrame();
-        fusionCore = new ItemPTBase("fusioncore");
+        fusionCore = new ItemFusionCore();
 
         GameRegistry.registerItem(powerArmorFrame, "armor_frame");
         GameRegistry.registerItem(fusionCore, "fusion_core");

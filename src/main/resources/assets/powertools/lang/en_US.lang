@@ -2,5 +2,6 @@ itemGroup.powertools=Power Tools
 
 item.powertools.armorframe.name=Power Armor Frame
 item.powertools.fusioncore.name=Fusion Core
+item.powertools.fusioncore.energy=RF: %s/%s
 
 tile.powertools.

@@ -24,6 +24,9 @@ public class PowerTools {
     @SidedProxy(serverSide = PROXY, clientSide = CLIENT)
     public static Proxy proxy;
 
+    @Mod.Instance
+    public static PowerTools modInstance;
+
     public static LogHelper log = LogHelper.createLogger(MOD_NAME);
     public static VersionChecker versionChecker;
     public static ModConfig config;
@@ -31,6 +34,7 @@ public class PowerTools {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         config = new ModConfig(MOD_ID, event.getSuggestedConfigurationFile(), Config.class);
+        config.loadConfig();
         versionChecker = new VersionChecker(UPDATE_URL, MOD_ID, MOD_NAME, MAJOR, MINOR, REV);
         if (Config.checkForUpdates)
             new Thread(versionChecker).start();
